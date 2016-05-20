@@ -1,4 +1,4 @@
-# ng-starter-app
+# react-starter-app
 
 Build a React.js app with a compile, bundle, and test pipeline already in place.
 
