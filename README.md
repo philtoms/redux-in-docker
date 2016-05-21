@@ -29,7 +29,7 @@ $ docker-compose logs
 
 # What it has
 
-- React.js
+- React.js v15.0.x
 - React Router
 - Redux
 - ES6 modules
