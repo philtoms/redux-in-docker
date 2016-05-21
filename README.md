@@ -23,9 +23,9 @@ $ docker-compose logs
 ```
 
 
-# Patterns and Organization
+# Organization
 
-We organize source by feature; with tests alongside source (roughly based on [this article](http://marmelab.com/blog/2015/12/17/react-directory-structure.html)).
+[By feature; with tests alongside source.](http://marmelab.com/blog/2015/12/17/react-directory-structure.html).
 
 # What it has
 
