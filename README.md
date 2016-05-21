@@ -25,7 +25,7 @@ $ docker-compose logs
 
 # Organization
 
-[By feature; with tests alongside source.](http://marmelab.com/blog/2015/12/17/react-directory-structure.html).
+[By feature; with tests alongside source.](http://marmelab.com/blog/2015/12/17/react-directory-structure.html)
 
 # What it has
 
