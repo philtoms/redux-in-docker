@@ -30,7 +30,6 @@ export default class App extends Component {
 
     return (
       <header>
-        <div>Webpack is doing its thing with React and ES2015</div>
         <div>Hello, World!</div>
         <div className={ counterStyles.counter }>{ counter }</div>
       </header>
