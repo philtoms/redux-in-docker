@@ -1,0 +1,17 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+    "document": true,
+    "window": true,
+    "console": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "rules": {
+    "semi": [2, "never"],
+    "object-curly-spacing": [2, "always"],
+    "no-console": 0
+  }
+}

@@ -32,7 +32,7 @@ $ docker-compose logs
 - React.js v15.0.x
 - React Router
 - Redux
-- ES6 modules
+- ES6 everywhere
 - Hot Reloading
 - Auth0 authentication
 - [Material UI](https://github.com/callemall/material-ui)
