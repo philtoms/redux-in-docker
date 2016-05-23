@@ -29,15 +29,16 @@ $ docker-compose logs
 
 # What it has
 
-- React.js v15.0.x
-- React Router
-- Redux
-- ES6 everywhere
-- Hot Reloading
-- Auth0 authentication
-- [Material UI](https://github.com/callemall/material-ui)
-- continuous bundling
-- continuous linting
-- continuous testing
-- continuous SASS authoring
-- sourcemaps
+- [x] React.js v15.0.x
+- [ ] React Router
+- [ ] Redux
+- [x] ES6 everywhere
+- [x] JSX/SASS Hot Reloading
+- [ ] Auth0 authentication
+- [ ] [Material UI](https://github.com/callemall/material-ui)
+- [x] continuous bundling
+- [x] continuous linting
+- [ ] continuous testing
+- [ ] sourcemaps & minification when `NODE_ENV=production`
+
+
