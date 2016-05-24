@@ -4,7 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import { Provider } from 'react-redux'
 import store from './store'
-import Home from './home'
+import { Home } from './home'
 
 
 const muiTheme = getMuiTheme({

@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import Navbar from 'navbar'
-import Lock from './lock'
+import { Navbar } from 'navbar'
+import { Lock } from 'auth'
 
 
-class Home extends Component {
+class VisualHome extends Component {
   static get propTypes() {
     return { loggedInUser: PropTypes.string }
   }
@@ -19,6 +19,6 @@ class Home extends Component {
 }
 
 
-export default connect(state => {
+export const Home = connect(state => {
   return { loggedInUser: state.loggedInUser }
-})(Home)
+})(VisualHome)

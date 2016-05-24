@@ -4,10 +4,12 @@ import thunkMiddleware from 'redux-thunk'
 import { authReducer, AuthService } from 'auth'
 
 const store = createStore(
-  authReducer, { loggedInUser: AuthService.authenticated ? AuthService.profile.email : null },
+  authReducer,
+  { loggedInUser: AuthService.authenticated ? AuthService.profile.email : null },
   compose(
     applyMiddleware(thunkMiddleware),
-    window.devToolsExtension ? window.devToolsExtension() : noop)
+    window.devToolsExtension ? window.devToolsExtension() : noop
+  )
 )
 
 export default store

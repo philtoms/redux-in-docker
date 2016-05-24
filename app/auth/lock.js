@@ -3,7 +3,7 @@ import { logIn } from 'auth'
 import store from 'store'
 
 
-export default class Lock extends Component {
+export class Lock extends Component {
   componentDidMount() {
     store.dispatch(logIn())
   }

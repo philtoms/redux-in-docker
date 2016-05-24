@@ -3,7 +3,7 @@ import { logOut } from 'auth'
 import { connect } from 'react-redux'
 
 
-class Navbar extends Component {
+class VisualNavbar extends Component {
   static get propTypes() {
     return {
       onLogOutClick: PropTypes.func,
@@ -28,8 +28,7 @@ class Navbar extends Component {
   }
 }
 
-
-export default connect(
+export const Navbar = connect(
   state => {
     return { loggedInUser: state.loggedInUser }
   },
@@ -40,4 +39,4 @@ export default connect(
       },
     }
   },
-)(Navbar)
+)(VisualNavbar)
