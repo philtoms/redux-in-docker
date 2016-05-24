@@ -1,0 +1,80 @@
+.loading {
+  position: relative;
+  padding: 20px 0 70px;
+  text-transform: uppercase;
+  color: #AEB4B4;
+  letter-spacing: .16em;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  & p {
+    font-size: 1em;
+  }
+}
+
+.loading-inner {
+  padding: 0 !important;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  padding: 0 100px;
+    text-align: center;
+  & label {
+    font-size: 20px;
+    opacity: 0;
+    display: inline-block;
+    }
+  & label:nth-child(6) {
+    -webkit-animation: dotSequence 3s infinite ease-in-out;
+    animation: dotSequence 3s infinite ease-in-out;
+    color: rgb(21, 165, 213);
+    }
+  & label:nth-child(5) {
+    -webkit-animation: dotSequence 3s 100ms infinite ease-in-out;
+    animation: dotSequence 3s 100ms infinite ease-in-out;
+    color: rgb(240, 101, 38);
+  }
+  & label:nth-child(4) {
+    -webkit-animation: dotSequence 3s 200ms infinite ease-in-out;
+    animation: dotSequence 3s 200ms infinite ease-in-out;
+    color: rgb(182, 69, 153);
+  }
+  & label:nth-child(3) {
+    -webkit-animation: dotSequence 3s 300ms infinite ease-in-out;
+    animation: dotSequence 3s 300ms infinite ease-in-out;
+    color: rgb(250, 164, 30);
+  }
+  & label:nth-child(2) {
+    -webkit-animation: dotSequence 3s 400ms infinite ease-in-out;
+    animation: dotSequence 3s 400ms infinite ease-in-out;
+    color: rgb(198, 215, 30);
+  }
+  & label:nth-child(1) {
+    -webkit-animation: dotSequence 3s 500ms infinite ease-in-out;
+    animation: dotSequence 3s 500ms infinite ease-in-out;
+    color: rgb(103, 119, 127);
+  }
+}
+
+@keyframes dotSequence {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  33% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+}

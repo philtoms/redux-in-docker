@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { logIn } from 'auth'
+import { Loader } from 'util'
 import store from 'store'
 
 
@@ -9,6 +10,6 @@ export class Lock extends Component {
   }
 
   render() {
-    return (<div>Logging in...</div>)
+    return (<Loader text={ 'Signing In' }></Loader>)
   }
 }
