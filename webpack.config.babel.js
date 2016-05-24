@@ -1,4 +1,4 @@
-import {join} from 'path';
+import {join, resolve} from 'path';
 import webpack from 'webpack';
 
 
@@ -13,7 +13,6 @@ export default {
   output: {
     path: join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/static/',
   },
 
   module: {
@@ -25,7 +24,7 @@ export default {
       },
       {
         test: /\.scss$/,
-        loaders: ['style-loader', 'css?modules&sourceMap!sass'],
+        loaders: ['style-loader', 'css?modules&camelCase&sourceMap!sass'],
       },
     ],
     preLoaders: [
@@ -34,6 +33,12 @@ export default {
         loader: 'eslint-loader',
         exclude: /node_modules/,
       },
+    ],
+  },
+
+  resolve: {
+    root: [
+      resolve('./app'),
     ],
   },
 
