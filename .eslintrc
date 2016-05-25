@@ -13,6 +13,7 @@
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "rules": {
+    "react/jsx-curly-spacing": [2, "always"],
     "semi": [2, "never"],
     "object-curly-spacing": [2, "always"],
     "no-console": 0,
