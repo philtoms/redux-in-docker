@@ -30,7 +30,7 @@ $ docker-compose logs
 # What it has
 
 - [x] React.js v15.0.x
-- [ ] React Router
+- [x] React Router
 - [x] Redux
 - [x] ES6 everywhere
 - [x] JSX/SASS Hot Reloading
