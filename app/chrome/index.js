@@ -4,7 +4,7 @@ import { NavbarContainer } from './navbar'
 import { Lock } from 'auth'
 
 
-class Home extends Component {
+class Chrome extends Component {
   render() {
     const { loggedInUser } = this.props
     if (loggedInUser) {
@@ -15,6 +15,6 @@ class Home extends Component {
 }
 
 
-export const HomeContainer = connect(state => {
+export const ChromeContainer = connect(state => {
   return { loggedInUser: state.loggedInUser }
-})(Home)
+})(Chrome)

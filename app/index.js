@@ -4,7 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import { Provider } from 'react-redux'
 import store from './store'
-import { HomeContainer } from './home'
+import { ChromeContainer } from './chrome'
 
 
 const muiTheme = getMuiTheme({
@@ -19,7 +19,7 @@ const muiTheme = getMuiTheme({
 ReactDOM.render(
   <MuiThemeProvider muiTheme={ muiTheme }>
     <Provider store={ store }>
-      <HomeContainer></HomeContainer>
+      <ChromeContainer></ChromeContainer>
     </Provider>
   </MuiThemeProvider>,
   document.getElementById('react-root')
