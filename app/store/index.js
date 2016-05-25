@@ -1,11 +1,15 @@
 import { noop } from 'lodash'
-import { createStore, applyMiddleware, compose } from 'redux'
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import thunkMiddleware from 'redux-thunk'
-import { authReducer, AuthService } from 'auth'
+import { authReducer } from 'auth'
+import { counterReducer } from 'counter'
+import { routerReducer } from 'react-router-redux'
+
+
 
 const store = createStore(
-  authReducer,
-  { loggedInUser: AuthService.authenticated ? AuthService.profile.email : null },
+  combineReducers({ auth: authReducer, counter: counterReducer, routing: routerReducer }),
+  undefined,
   compose(
     applyMiddleware(thunkMiddleware),
     window.devToolsExtension ? window.devToolsExtension() : noop

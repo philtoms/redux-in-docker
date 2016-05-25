@@ -46,6 +46,7 @@ export default {
     hot: true,
     inline: true,
     progress: true,
+    historyApiFallback: true,
   },
 
   plugins: [
@@ -60,5 +61,6 @@ export default {
 
   eslint: {
     configFile: '.eslintrc',
+    fix: true,
   },
 };
