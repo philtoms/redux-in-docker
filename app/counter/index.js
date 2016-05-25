@@ -1,19 +1,10 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import AppBar from 'material-ui/AppBar'
 import counterStyles from './counter.scss'
 import RaisedButton from 'material-ui/RaisedButton'
 
 
 export class Counter extends Component {
-  static get propTypes() {
-    return {
-      count: PropTypes.number.isRequired,
-      onIncrement: PropTypes.func.isRequired,
-      onDecrement: PropTypes.func.isRequired,
-    }
-  }
-
-
   incrementIfOdd() {
     if (this.props.count % 2 !== 0) {
       this.props.onIncrement()

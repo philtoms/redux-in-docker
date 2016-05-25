@@ -14,6 +14,7 @@
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "rules": {
     "react/jsx-curly-spacing": [2, "always"],
+    "react/prop-types": 0,
     "semi": [2, "never"],
     "object-curly-spacing": [2, "always"],
     "no-console": 0,

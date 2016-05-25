@@ -1,24 +1,20 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Navbar } from 'navbar'
+import { NavbarContainer } from './navbar'
 import { Lock } from 'auth'
 
 
-class VisualHome extends Component {
-  static get propTypes() {
-    return { loggedInUser: PropTypes.string }
-  }
-
+class Home extends Component {
   render() {
     const { loggedInUser } = this.props
     if (loggedInUser) {
-      return (<Navbar loggedInUser={ loggedInUser } />)
+      return (<NavbarContainer loggedInUser={ loggedInUser } />)
     }
     return (<Lock></Lock>)
   }
 }
 
 
-export const Home = connect(state => {
+export const HomeContainer = connect(state => {
   return { loggedInUser: state.loggedInUser }
-})(VisualHome)
+})(Home)

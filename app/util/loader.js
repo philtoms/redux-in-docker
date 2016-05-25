@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import loadingStyles from './loader.scss'
 
 export const Loader = ({ text = 'Loading' }) => {
@@ -15,8 +15,4 @@ export const Loader = ({ text = 'Loading' }) => {
       </div>
     </div>
   )
-}
-
-Loader.propTypes = {
-  text: PropTypes.string,
 }
