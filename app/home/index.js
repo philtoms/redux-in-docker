@@ -25,6 +25,7 @@ export const Home = () => {
           <li><BlankTargetLink to='https://github.com/matthew-andrews/isomorphic-fetch'>fetch</BlankTargetLink></li>
         </ul>
       </p>
+      <p>Hot-reloading is enabled; edit code in your IDE and watch the app update in real-time</p>
     </div>
   )
 }
