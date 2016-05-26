@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { logOut } from 'auth'
 import { connect } from 'react-redux'
 import { NavLink } from './navlink'
+import styles from './navbar.scss'
+
 
 
 
@@ -20,7 +22,7 @@ class Navbar extends Component {
     const { loggedInUser } = this.props
     const logOutLink = loggedInUser ? <a href='' onClick={ this.clickLogOut }>Log out</a> : null
     return (
-      <div>
+      <div id={ styles.navbar }>
         {
           loggedInUser
           ? `Logged in as ${loggedInUser} `
