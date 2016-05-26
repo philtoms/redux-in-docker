@@ -1,8 +1,11 @@
+@import '~app.scss';
+
+
 .loading {
   position: relative;
   padding: 20px 0 70px;
   text-transform: uppercase;
-  color: #AEB4B4;
+  color: $dark-grey;
   letter-spacing: .16em;
   top: 0;
   left: 0;

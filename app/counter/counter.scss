@@ -1,5 +1,10 @@
+// SASS modules are resolved from the root directory
+@import '~app.scss';
+
 .counter {
   font-size: 30px;
+  color: $dark-grey;
+
 }
 
 .counter-button {
