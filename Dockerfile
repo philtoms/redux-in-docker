@@ -17,8 +17,5 @@ RUN npm install --loglevel=warn
 COPY . $ROOT/src/
 RUN npm run build && npm run test
 
-EXPOSE 80
-EXPOSE 8888
-
 # start sever
 CMD ./run.sh
