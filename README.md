@@ -20,8 +20,9 @@ Start the containers, and write your application.
 
 ```
 $ docker-compose up -d
-$ docker-compose logs
+$ docker-compose logs -f
 ```
+
 
 We support [Docker Mac](https://blog.docker.com/2016/03/docker-for-mac-windows-beta/). To activate it 
 
@@ -29,9 +30,39 @@ We support [Docker Mac](https://blog.docker.com/2016/03/docker-for-mac-windows-b
 $ echo "DOCKER_MAC_BETA=1" >> .env
 ```
 
+Visit `http://$(docker-machine ip):8000` to see your changes, if you're not using Docker Mac, else visit `http://localhost:8000`. 
+
+### Development outside the container
+
+This is discouraged, but there might be some unforeseen reason you'd like to develop outside the container. In that case, just run
+
+```
+$ npm run dev
+```
+
+and visit `http://localhost:8080`.
+
 # Organization
 
-[By feature; with tests alongside source.](http://marmelab.com/blog/2015/12/17/react-directory-structure.html)
+[By feature; with tests alongside source](http://marmelab.com/blog/2015/12/17/react-directory-structure.html) - though there aren't tests yet. 
+
+## ES6 modules
+
+ES6 modules can be imported using relative file URLs or using Webpack's module resolution from the root `app/`
+
+```javascript
+import { ... } from 'auth' // maps to './auth';
+import { ... } from 'util' // maps to './util';
+```
+
+## SASS modules
+
+SASS modules can be imported using relative file URLs or using Webpack's module resolution from the root `app/`
+
+```sass
+@import '~app.scss';
+@import '~counter/counter.scss';
+```
 
 # What it has
 
