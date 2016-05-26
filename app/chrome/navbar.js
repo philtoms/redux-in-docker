@@ -29,7 +29,7 @@ class Navbar extends Component {
         <div className={ styles.navlinks }>
           <ul>
             <li><NavLink to='/' onlyActiveOnIndex={ true }><ActionHome className={ styles.homeIcon } color='#455A64'></ActionHome></NavLink></li>
-            <li><NavLink to='/counter'>Component Example</NavLink></li>
+            <li><NavLink to='/example'>Component Example</NavLink></li>
             <li><NavLink to='/dummy-route-1'>Dummy Route 1</NavLink></li>
             <li><NavLink to='/dummy-route-2'>Dummy Route 2</NavLink></li>
           </ul>

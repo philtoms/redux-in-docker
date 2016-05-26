@@ -30,8 +30,8 @@ ReactDOM.render(
       <Router history={ syncHistoryWithStore(browserHistory, store) }>
         <Route path='/' component={ ChromeContainer }>
           <IndexRoute component={ Home } />
-          <Route path='/counter' component={ CounterContainer }></Route>
-          <Route path='/dummy-route-1' component={ ExampleComponent }></Route>
+          <Route path='/example' component={ CounterContainer }></Route>
+          <Route path='/dummy-route-1' component={ ExampleComponent } content='First Dummy Route'></Route>
           <Route path='/dummy-route-2' component={ ExampleComponent }></Route>
         </Route>
       </Router>
