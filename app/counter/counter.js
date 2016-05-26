@@ -17,6 +17,26 @@ const Counter = ({ count, onIncrement, onDecrement }) => {
       <RaisedButton className={ counterStyles.counterButton } primary={ true } label={ '+' } onClick={ onIncrement }></RaisedButton>
       { ' ' }
       <RaisedButton className={ counterStyles.counterButton } primary={ true } label={ '-' } onClick={ onDecrement }></RaisedButton>
+      <div>
+        <pre style={ { fontFamily: 'Open Sans' } }>
+        { `
+export const CounterContainer = connect(
+  ({ counter }) => {
+    return { count: counter.count }
+  },
+  dispatch => {
+    return {
+      onIncrement() {
+        return dispatch(increment())
+      },
+      onDecrement() {
+        return dispatch(decrement())
+      },
+    }
+  })(Counter)
+` }
+        </pre>
+      </div>
     </div>
   )
 }
