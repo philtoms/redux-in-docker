@@ -20,7 +20,15 @@ export default {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['react-hot', 'babel?cacheDirectory'],
+        loader: 'react-hot',
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: {
+          cacheDirectory: '/tmp'
+        },
       },
       {
         test: /\.scss$/,
@@ -47,6 +55,9 @@ export default {
     inline: true,
     progress: true,
     historyApiFallback: true,
+    watchOptions: process.env.DOCKER_MAC_BETA
+      ? { aggregateTimeout: 300, poll: 1000 }
+      : {}
   },
 
   plugins: [
@@ -54,7 +65,7 @@ export default {
     new webpack.optimize.DedupePlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_EMV: JSON.stringify(process.env.NODE_ENV || 'development'),
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
       }
     })
   ],

@@ -17,11 +17,17 @@ $ docker-compose build
 
 Start the containers, and write your application.
 
+
 ```
 $ docker-compose up -d
 $ docker-compose logs
 ```
 
+We support [Docker Mac](https://blog.docker.com/2016/03/docker-for-mac-windows-beta/). To activate it 
+
+```
+$ echo "DOCKER_MAC_BETA=1" >> .env
+```
 
 # Organization
 
