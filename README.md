@@ -49,18 +49,14 @@ Development tooling includes
 
 [By feature; with tests alongside source](http://marmelab.com/blog/2015/12/17/react-directory-structure.html) - though there aren't tests yet. 
 
-## ES6 modules
+## ES6 and SASS modules
 
-ES6 modules can be imported using relative file URLs or using Webpack's module resolution from the root `app/`
+ES6 and SASS modules can be imported using relative file URLs or using Webpack's module resolution from the root `app/`
 
 ```javascript
 import { ... } from 'auth' // maps to './auth';
 import { ... } from 'util' // maps to './util';
 ```
-
-## SASS modules
-
-SASS modules can be imported using relative file URLs or using Webpack's module resolution from the root `app/`
 
 ```sass
 @import '~app.scss';
