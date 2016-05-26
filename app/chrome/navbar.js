@@ -6,7 +6,7 @@ import ActionHome from 'material-ui/svg-icons/action/home'
 import IconButton from 'material-ui/IconButton/IconButton'
 import Avatar from 'material-ui/Avatar'
 import { connect } from 'react-redux'
-import { NavLink } from './navlink'
+import { NavLink } from 'util'
 import styles from './navbar.scss'
 
 
@@ -28,8 +28,10 @@ class Navbar extends Component {
       <div className={ styles.navbar }>
         <div className={ styles.navlinks }>
           <ul>
-            <li><NavLink to='/'><ActionHome className={ styles.homeIcon }></ActionHome></NavLink></li>
-            <li><NavLink to='/example'>Example</NavLink></li>
+            <li><NavLink to='/' onlyActiveOnIndex={ true }><ActionHome className={ styles.homeIcon } color='#455A64'></ActionHome></NavLink></li>
+            <li><NavLink to='/counter'>Component Example</NavLink></li>
+            <li><NavLink to='/dummy-route-1'>Dummy Route 1</NavLink></li>
+            <li><NavLink to='/dummy-route-2'>Dummy Route 2</NavLink></li>
           </ul>
         </div>
         <div className={ styles.navmenu }>

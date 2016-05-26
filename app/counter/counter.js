@@ -15,26 +15,6 @@ const Counter = ({ count, onIncrement, onDecrement }) => {
       <RaisedButton className={ styles.counterButton } primary={ true } onClick={ onIncrement } icon={ <AddCircle /> } />
       { ' ' }
       <RaisedButton className={ styles.counterButton } primary={ true } onClick={ onDecrement } icon={ <RemoveCircle /> } />
-      <div>
-        <p className={ styles.counterCodeHeading }>Code:</p>
-        <pre style={ { marginTop: 0 } }>
-        { `
-import { connect } from 'react-redux'
-
-
-export const CounterContainer = connect(
-  ({ counter }) => {
-    return { count: counter.count }
-  },
-  dispatch => {
-    return {
-      onIncrement: () => dispatch(increment()),
-      onDecrement: () => dispatch(decrement()),
-    }
-  })(Counter)
-` }
-        </pre>
-      </div>
     </div>
   )
 }

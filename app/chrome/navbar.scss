@@ -18,26 +18,25 @@
   margin: 0;
   padding: 0;
   ul {
-    min-width: 500px;
     top: -3px;
     left: 10px;
     list-style: none;
     margin: 0;
     padding: 0;
     li {
-      min-width: 20px;
+      position: relative;
       height: 20px;
       display: inline-block;
       margin-left: 15px;
-      position: relative;
       margin-top: 20px;
       svg {
         position: absolute;
-        top: -10px;
+        top: -15px;
+        left: 0;
       }
       a {
-        position: absolute;
-        top: -5px;
+        margin-left: 15px;
+        color: $blue-grey;
       }
     }
   }
@@ -53,7 +52,7 @@
     right: 55px;
     display: inline-block;
     white-space: nowrap;
-    top: 13px;
+    top: 15px;
   }
 }
 
