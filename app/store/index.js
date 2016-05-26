@@ -1,4 +1,4 @@
-import { noop } from 'lodash'
+import { identity } from 'lodash'
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { authReducer } from 'auth'
@@ -12,7 +12,7 @@ const store = createStore(
   undefined,
   compose(
     applyMiddleware(thunkMiddleware),
-    window.devToolsExtension ? window.devToolsExtension() : noop
+    window.devToolsExtensions ? window.devToolsExtension() : identity
   )
 )
 
