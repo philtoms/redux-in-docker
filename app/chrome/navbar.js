@@ -33,7 +33,7 @@ class Navbar extends Component {
         <div className={ styles.navmenu }>
           {
             loggedInUser
-            ? <span>Hi { loggedInUser }!</span>
+            ? <span>Hi <strong>{ loggedInUser }</strong>!</span>
             : ''
           }
           <IconMenu
