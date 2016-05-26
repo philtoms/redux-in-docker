@@ -4,5 +4,5 @@ import { Link } from 'react-router'
 
 
 export const NavLink = props => {
-  return (<Link { ...props } activeStyle={ { color: 'red' } }>{ props.children }</Link>)
+  return (<Link { ...props } activeStyle={ { color: 'blue' } }>{ props.children }</Link>)
 }

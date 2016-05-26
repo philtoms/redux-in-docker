@@ -35,7 +35,7 @@ This is discouraged, but there might be some unforeseen reason you'd like to dev
 $ npm run dev
 ```
 
-and visit `http://localhost:8080`.
+and visit `http://localhost:8000`.
 
 ### Debugging
 

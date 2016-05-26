@@ -9,15 +9,16 @@ import { ChromeContainer } from './chrome'
 import { Home } from 'home'
 import { CounterContainer } from 'counter'
 import { syncHistoryWithStore } from 'react-router-redux'
+import injectTapEventPlugin from 'react-tap-event-plugin'
+
+
+injectTapEventPlugin()
 
 
 
 const muiTheme = getMuiTheme({
   palette: {
     textColor: 'cyan500',
-  },
-  appBar: {
-    height: 50,
   },
 })
 

@@ -2,18 +2,22 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { NavbarContainer } from './navbar'
 import { Lock } from 'auth'
+import styles from './chrome.scss'
+
 
 
 const Chrome = ({ loggedInUser, children }) => {
   return (
     <div>
       <NavbarContainer loggedInUser={ loggedInUser }></NavbarContainer>
-      { children }
       {
         loggedInUser
-        ? null
-        : <Lock></Lock>
+          ? ''
+          : <Lock></Lock>
       }
+      <div className={ styles.chrome }>
+        { children }
+      </div>
     </div>
   )
 }

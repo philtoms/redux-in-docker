@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import { logOut } from 'auth'
+import IconMenu from 'material-ui/IconMenu'
+import MenuItem from 'material-ui/MenuItem'
+import IconButton from 'material-ui/IconButton/IconButton'
+import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
 import { connect } from 'react-redux'
 import { NavLink } from './navlink'
 import styles from './navbar.scss'
-
-
 
 
 class Navbar extends Component {
@@ -20,19 +22,25 @@ class Navbar extends Component {
 
   render() {
     const { loggedInUser } = this.props
-    const logOutLink = loggedInUser ? <a href='' onClick={ this.clickLogOut }>Log out</a> : null
     return (
-      <div id={ styles.navbar }>
-        {
-          loggedInUser
-          ? `Logged in as ${loggedInUser} `
-          : 'Logged out'
-        }
-        { logOutLink }
-        <ul>
-          <li><NavLink to='/example'>Example</NavLink></li>
-          <li><NavLink to='/'>Home</NavLink></li>
-        </ul>
+      <div className={ styles.navbar }>
+        <div className={ styles.navlinks }>
+          <ul>
+            <li><NavLink to='/'>Home</NavLink></li>
+            <li><NavLink to='/example'>Example</NavLink></li>
+          </ul>
+        </div>
+        <div className={ styles.navmenu }>
+          <span>
+            Hi { loggedInUser }!
+          </span>
+          <IconMenu
+            iconButtonElement={ <IconButton><MoreVertIcon /></IconButton> }
+            targetOrigin={ { horizontal: 'right', vertical: 'bottom' } }
+            anchorOrigin={ { horizontal: 'right', vertical: 'top' } }>
+            <MenuItem primaryText="Sign out" onClick={ this.clickLogOut } disabled={ !loggedInUser } />
+          </IconMenu>
+        </div>
       </div>
     )
   }
