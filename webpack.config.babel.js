@@ -56,9 +56,10 @@ export default {
     progress: true,
     historyApiFallback: true,
     host: '0.0.0.0',
+    port: '8000',
     watchOptions: process.env.DOCKER_MAC_BETA
-      ? { aggregateTimeout: 300, poll: 1000 }
-      : {}
+      ? {}
+      : { aggregateTimeout: 300, poll: 1000 }
   },
 
   plugins: [
