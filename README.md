@@ -8,7 +8,7 @@ Get [Docker](https://docs.docker.com/linux/step_one/) (preferably [Docker Mac Be
 
 Ordinarily the recommended practice is to fork, but that'll create a naming conflict within [trueprint](github.com/trueprint). Create a new repository, and make sure to [import the code](https://help.github.com/articles/importing-your-project-to-github/) - you'll be given a choice to at some point.
 
-Then configure [an upstream origin](https://help.github.com/articles/configuring-a-remote-for-a-fork/). To sync upstream updates, follow [this guide](https://help.github.com/articles/syncing-a-fork/)
+Then configure [an upstream origin](https://help.github.com/articles/configuring-a-remote-for-a-fork/). To sync upstream updates, follow [this guide](https://help.github.com/articles/syncing-a-fork/).
 
 Start the containers, and write your application.
 
