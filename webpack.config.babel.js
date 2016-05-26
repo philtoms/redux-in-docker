@@ -55,6 +55,7 @@ export default {
     inline: true,
     progress: true,
     historyApiFallback: true,
+    host: '0.0.0.0',
     watchOptions: process.env.DOCKER_MAC_BETA
       ? { aggregateTimeout: 300, poll: 1000 }
       : {}
