@@ -10,7 +10,7 @@ import { increment, decrement } from './actions'
 const Counter = ({ count, onIncrement, onDecrement }) => {
   return (
     <div>
-      <p>An example of a "container component" connected to the Redux store.</p>
+      <p>An example of a "container component" connected to the Redux store with synchronous dispatches.</p>
       <p className={ styles.counterHeading }>Clicked <strong>{ count }</strong> times.</p>
       <RaisedButton className={ styles.counterButton } primary={ true } label={ '+' } onClick={ onIncrement }></RaisedButton>
       { ' ' }
