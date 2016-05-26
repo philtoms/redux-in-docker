@@ -31,9 +31,11 @@ class Navbar extends Component {
           </ul>
         </div>
         <div className={ styles.navmenu }>
-          <span>
-            Hi { loggedInUser }!
-          </span>
+          {
+            loggedInUser
+            ? <span>Hi { loggedInUser }!</span>
+            : ''
+          }
           <IconMenu
             iconButtonElement={ <IconButton><MoreVertIcon /></IconButton> }
             targetOrigin={ { horizontal: 'right', vertical: 'bottom' } }

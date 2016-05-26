@@ -25,7 +25,14 @@ export const Home = () => {
           <li><BlankTargetLink to='https://github.com/matthew-andrews/isomorphic-fetch'>fetch</BlankTargetLink></li>
         </ul>
       </p>
-      <p>Hot-reloading is enabled; edit code in your IDE and watch the app update in real-time</p>
+      <p>Hot-reloading is enabled; edit code in your IDE and watch the app update in real-time.</p>
+      <p><strong>Useful References:</strong></p>
+      <p>
+        <ul>
+          <li><BlankTargetLink to='https://www.youtube.com/watch?v=xsSnOQynTHs'>Hot Reloading With Time Travel</BlankTargetLink></li>
+          <li><BlankTargetLink to='https://egghead.io/series/getting-started-with-redux'>Getting Started With Redux</BlankTargetLink></li>
+        </ul>
+      </p>
     </div>
   )
 }
