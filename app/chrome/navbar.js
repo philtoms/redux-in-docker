@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { logOut } from 'auth'
 import IconMenu from 'material-ui/IconMenu'
 import MenuItem from 'material-ui/MenuItem'
+import ActionHome from 'material-ui/svg-icons/action/home'
 import IconButton from 'material-ui/IconButton/IconButton'
 import Avatar from 'material-ui/Avatar'
 import { connect } from 'react-redux'
@@ -27,7 +28,7 @@ class Navbar extends Component {
       <div className={ styles.navbar }>
         <div className={ styles.navlinks }>
           <ul>
-            <li><NavLink to='/'>Home</NavLink></li>
+            <li><NavLink to='/'><ActionHome className={ styles.homeIcon }></ActionHome></NavLink></li>
             <li><NavLink to='/example'>Example</NavLink></li>
           </ul>
         </div>
