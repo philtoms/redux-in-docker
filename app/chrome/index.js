@@ -7,16 +7,12 @@ import styles from './chrome.scss'
 
 
 const Chrome = ({ loggedInUser, children }) => {
+  let innerHtml = loggedInUser ? children : <Lock></Lock>
   return (
     <div>
       <NavbarContainer loggedInUser={ loggedInUser }></NavbarContainer>
-      {
-        loggedInUser
-          ? ''
-          : <Lock></Lock>
-      }
       <div className={ styles.chrome }>
-        { children }
+        { innerHtml }
       </div>
     </div>
   )
