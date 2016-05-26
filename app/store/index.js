@@ -12,7 +12,7 @@ const store = createStore(
   undefined,
   compose(
     applyMiddleware(thunkMiddleware),
-    window.devToolsExtensions ? window.devToolsExtension() : identity
+    window.devToolsExtension ? window.devToolsExtension() : identity
   )
 )
 

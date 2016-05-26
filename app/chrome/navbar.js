@@ -3,7 +3,6 @@ import { logOut } from 'auth'
 import IconMenu from 'material-ui/IconMenu'
 import MenuItem from 'material-ui/MenuItem'
 import IconButton from 'material-ui/IconButton/IconButton'
-import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
 import Avatar from 'material-ui/Avatar'
 import { connect } from 'react-redux'
 import { NavLink } from './navlink'
@@ -24,7 +23,6 @@ class Navbar extends Component {
   render() {
     const { loggedInUser } = this.props
     const authenticated = !!loggedInUser
-    console.log(loggedInUser)
     return (
       <div className={ styles.navbar }>
         <div className={ styles.navlinks }>
@@ -40,7 +38,7 @@ class Navbar extends Component {
             : ''
           }
           <IconMenu
-            iconButtonElement={ <IconButton><Avatar src={ loggedInUser.picture } className={ styles.navmenuAvatar } /></IconButton> }
+            iconButtonElement={ <IconButton><Avatar src={ authenticated ? loggedInUser.picture : '' } className={ styles.navmenuAvatar } /></IconButton> }
             targetOrigin={ { horizontal: 'right', vertical: 'bottom' } }
             anchorOrigin={ { horizontal: 'right', vertical: 'top' } }>
             <MenuItem primaryText="Sign out" onClick={ this.clickLogOut } disabled={ !authenticated } />

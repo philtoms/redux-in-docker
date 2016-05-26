@@ -15,7 +15,7 @@ export const loggedOut = () => {
 const logInSuccess = profile => {
   return {
     type: LOGIN_SUCCESS,
-    loggedInUser: profile.email,
+    loggedInUser: profile,
   }
 }
 
