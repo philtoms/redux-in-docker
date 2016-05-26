@@ -25,7 +25,7 @@ We support [Docker Mac](https://blog.docker.com/2016/03/docker-for-mac-windows-b
 $ echo "DOCKER_MAC_BETA=1" >> .env
 ```
 
-Visit `http://$(docker-machine ip):8000` to see your changes, if you're not using Docker Mac, else visit `http://localhost:8000`. 
+Visit `http://$(docker-machine ip):8000` to see your changes if you're not using Docker Mac, else visit `http://localhost:8000`. 
 
 ### Development outside the container
 
