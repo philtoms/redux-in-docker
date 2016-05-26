@@ -1,9 +1,20 @@
 // SASS modules are resolved from the root directory
 @import '~styles/app.scss';
 
-.counter {
-  font-size: 20px;
+
+$heading-font-size: 20px;
+
+
+@mixin heading {
+  font-size: $heading-font-size;
+  margin-top: 35px;
 }
 
-.counter-button {
+.counter-heading {
+  @include heading;
+}
+
+.counter-code-heading {
+  @include heading;
+  margin-bottom: 0;
 }

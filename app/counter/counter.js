@@ -1,5 +1,5 @@
 import React from 'react'
-import counterStyles from './counter.scss'
+import styles from './counter.scss'
 import RaisedButton from 'material-ui/RaisedButton'
 import { connect } from 'react-redux'
 import { increment, decrement } from './actions'
@@ -11,15 +11,17 @@ const Counter = ({ count, onIncrement, onDecrement }) => {
   return (
     <div>
       <p>An example of a "container component" connected to the Redux store.</p>
-      <p className={ counterStyles.counter }>
-        Clicked <strong>{ count }</strong> times.
-      </p>
-      <RaisedButton className={ counterStyles.counterButton } primary={ true } label={ '+' } onClick={ onIncrement }></RaisedButton>
+      <p className={ styles.counterHeading }>Clicked <strong>{ count }</strong> times.</p>
+      <RaisedButton className={ styles.counterButton } primary={ true } label={ '+' } onClick={ onIncrement }></RaisedButton>
       { ' ' }
-      <RaisedButton className={ counterStyles.counterButton } primary={ true } label={ '-' } onClick={ onDecrement }></RaisedButton>
+      <RaisedButton className={ styles.counterButton } primary={ true } label={ '-' } onClick={ onDecrement }></RaisedButton>
       <div>
-        <pre style={ { fontFamily: 'Open Sans' } }>
+        <p className={ styles.counterCodeHeading }><strong>Code:</strong></p>
+        <pre style={ { fontFamily: 'Open Sans', marginTop: 0 } }>
         { `
+import { connect } from 'react-redux'
+
+
 export const CounterContainer = connect(
   ({ counter }) => {
     return { count: counter.count }
