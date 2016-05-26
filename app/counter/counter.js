@@ -28,12 +28,8 @@ export const CounterContainer = connect(
   },
   dispatch => {
     return {
-      onIncrement() {
-        return dispatch(increment())
-      },
-      onDecrement() {
-        return dispatch(decrement())
-      },
+      onIncrement: () => dispatch(increment()),
+      onDecrement: () => dispatch(decrement()),
     }
   })(Counter)
 ` }
