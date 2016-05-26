@@ -42,6 +42,14 @@ $ npm run dev
 
 and visit `http://localhost:8080`.
 
+### Debugging
+
+Development tooling includes
+
+- sourcemaps
+- [Redux DevTools](https://github.com/gaearon/redux-devtools#chrome-extension) - for monitoring state and "time travel"
+- [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) - inspect components in the DOM
+
 # Organization
 
 [By feature; with tests alongside source](http://marmelab.com/blog/2015/12/17/react-directory-structure.html) - though there aren't tests yet. 
