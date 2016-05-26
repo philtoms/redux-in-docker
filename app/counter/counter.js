@@ -17,7 +17,7 @@ const Counter = ({ count, onIncrement, onDecrement }) => {
       <RaisedButton className={ styles.counterButton } primary={ true } label={ '-' } onClick={ onDecrement }></RaisedButton>
       <div>
         <p className={ styles.counterCodeHeading }><strong>Code:</strong></p>
-        <pre style={ { fontFamily: 'Open Sans', marginTop: 0 } }>
+        <pre style={ { marginTop: 0 } }>
         { `
 import { connect } from 'react-redux'
 

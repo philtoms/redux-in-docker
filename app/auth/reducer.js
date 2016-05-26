@@ -4,7 +4,7 @@ import { AuthService } from './service'
 
 
 export function authReducer(
-  state = { loggedInUser: AuthService.authenticated ? AuthService.profile.email : null },
+  state = { loggedInUser: AuthService.authenticated ? AuthService.profile : null },
   action
 ) {
   const { type } = action

@@ -4,6 +4,7 @@ import IconMenu from 'material-ui/IconMenu'
 import MenuItem from 'material-ui/MenuItem'
 import IconButton from 'material-ui/IconButton/IconButton'
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
+import Avatar from 'material-ui/Avatar'
 import { connect } from 'react-redux'
 import { NavLink } from './navlink'
 import styles from './navbar.scss'
@@ -22,6 +23,8 @@ class Navbar extends Component {
 
   render() {
     const { loggedInUser } = this.props
+    const authenticated = !!loggedInUser
+    console.log(loggedInUser)
     return (
       <div className={ styles.navbar }>
         <div className={ styles.navlinks }>
@@ -32,15 +35,15 @@ class Navbar extends Component {
         </div>
         <div className={ styles.navmenu }>
           {
-            loggedInUser
-            ? <span>Hi <strong>{ loggedInUser }</strong>!</span>
+            authenticated
+            ? <span>Hi <strong>{ loggedInUser.name }</strong>!</span>
             : ''
           }
           <IconMenu
-            iconButtonElement={ <IconButton><MoreVertIcon /></IconButton> }
+            iconButtonElement={ <IconButton><Avatar src={ loggedInUser.picture } className={ styles.navmenuAvatar } /></IconButton> }
             targetOrigin={ { horizontal: 'right', vertical: 'bottom' } }
             anchorOrigin={ { horizontal: 'right', vertical: 'top' } }>
-            <MenuItem primaryText="Sign out" onClick={ this.clickLogOut } disabled={ !loggedInUser } />
+            <MenuItem primaryText="Sign out" onClick={ this.clickLogOut } disabled={ !authenticated } />
           </IconMenu>
         </div>
       </div>

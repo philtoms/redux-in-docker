@@ -40,9 +40,15 @@
 
   > span {
     position: absolute;
-    right: 50px;
+    right: 55px;
     display: inline-block;
     white-space: nowrap;
     top: 13px;
   }
+}
+
+.navmenu-avatar {
+  position: absolute;
+  top: 5px;
+  right:5px;
 }
