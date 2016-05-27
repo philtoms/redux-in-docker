@@ -1,17 +1,19 @@
-# react-starter-app
+## react-starter-app
 
 Build a React.js app with a compile, bundle, and test pipeline already in place.
 
 ![may-26-2016 17-17-28](https://cloud.githubusercontent.com/assets/2729079/15594106/54638e06-2367-11e6-829b-d5d5938b4cd2.gif)
 
 
-# Getting Started
+### Development
 
 Get [Docker](https://docs.docker.com/linux/step_one/) (preferably [Docker Mac Beta](beta.docker.com) if you're on a Mac).
 
 Ordinarily the recommended practice is to fork, but that'll create a naming conflict within [trueprint](github.com/trueprint). Create a new repository, and make sure to [import the code](https://help.github.com/articles/importing-your-project-to-github/) - you'll be given a choice to at some point.
 
 Then configure [an upstream origin](https://help.github.com/articles/configuring-a-remote-for-a-fork/). To sync upstream updates, follow [this guide](https://help.github.com/articles/syncing-a-fork/).
+
+#### In Docker
 
 Start the containers, and write your application.
 
@@ -30,7 +32,7 @@ $ echo "DOCKER_MAC_BETA=1" >> .env
 
 Visit `http://$(docker-machine ip):8000` to see your changes if you're not using Docker Mac, else visit `http://localhost:8000`. 
 
-### Development outside the container
+#### Not in Docker
 
 This is discouraged, but there might be some unforeseen reason you'd like to develop outside the container. In that case, just run
 
@@ -40,7 +42,7 @@ $ npm run dev
 
 and visit `http://localhost:8000`.
 
-### Debugging
+#### Debugging
 
 Development tooling includes
 
@@ -48,11 +50,11 @@ Development tooling includes
 - [Redux DevTools](https://github.com/gaearon/redux-devtools#chrome-extension) - for monitoring state and "time travel"
 - [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) - inspect components in the DOM
 
-# Organization
+### Organization
 
 [By feature; with tests alongside source](http://marmelab.com/blog/2015/12/17/react-directory-structure.html) - though there aren't tests yet. 
 
-## ES6 and SASS modules
+#### ES6 and SASS modules
 
 ES6 and SASS modules can be imported using relative file URLs or using Webpack's module resolution from the root `app/`
 
@@ -66,11 +68,12 @@ import { ... } from 'util' // maps to './util';
 @import '~counter/counter.scss';
 ```
 
-# What it has
+### Features
 
 - [x] React.js v15.0.x
 - [x] React Router
 - [x] Redux
+- [x] Redux Thunk
 - [x] ES6 everywhere
 - [x] JSX/SASS Hot Reloading
 - [x] Auth0 authentication
