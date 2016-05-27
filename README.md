@@ -7,40 +7,24 @@ Build a React.js app with a compile, bundle, and test pipeline already in place.
 
 ### Development
 
-Get [Docker](https://docs.docker.com/linux/step_one/) (preferably [Docker Mac Beta](beta.docker.com) if you're on a Mac).
-
-Ordinarily the recommended practice is to fork, but that'll create a naming conflict within [trueprint](github.com/trueprint). Create a new repository, and make sure to [import the code](https://help.github.com/articles/importing-your-project-to-github/) - you'll be given a choice to at some point.
-
-Then configure [an upstream origin](https://help.github.com/articles/configuring-a-remote-for-a-fork/). To sync upstream updates, follow [this guide](https://help.github.com/articles/syncing-a-fork/).
+Get [Docker](https://docs.docker.com/linux/step_one/) (preferably [Docker Mac Beta](beta.docker.com) if you're on a Mac). Fork this repository.
 
 #### In Docker
 
 Start the containers, and write your application.
-
 
 ```
 $ docker-compose up -d
 $ docker-compose logs -f
 ```
 
-
-We support [Docker Mac](https://blog.docker.com/2016/03/docker-for-mac-windows-beta/). To activate it 
+[Docker Mac](https://blog.docker.com/2016/03/docker-for-mac-windows-beta/) is supported. To activate it 
 
 ```
 $ echo "DOCKER_MAC_BETA=1" >> .env
 ```
 
-Visit `http://$(docker-machine ip):8000` to see your changes if you're not using Docker Mac, else visit `http://localhost:8000`. 
-
-#### Not in Docker
-
-This is discouraged, but there might be some unforeseen reason you'd like to develop outside the container. In that case, just run
-
-```
-$ npm run dev
-```
-
-and visit `http://localhost:8000`.
+Visit `http://$(docker-machine ip):8080` to see your changes if you're not using Docker Mac, else visit `http://localhost:8080`. 
 
 #### Debugging
 
@@ -76,7 +60,6 @@ import { ... } from 'util' // maps to './util';
 - [x] Redux Thunk
 - [x] ES6 everywhere
 - [x] JSX/SASS Hot Reloading
-- [x] Auth0 authentication
 - [x] [Material UI](https://github.com/callemall/material-ui)
 - [x] continuous bundling
 - [x] continuous linting
