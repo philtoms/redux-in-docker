@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { Router, Route, IndexRoute, Redirect, browserHistory } from 'react-router'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
@@ -36,6 +36,7 @@ ReactDOM.render(
           <Route path='example' component={ CounterContainer }></Route>
           <Route path='dummy-route-1' component={ ExampleComponent } content='First Dummy Route'></Route>
           <Route path='dummy-route-2' component={ ExampleComponent }></Route>
+          <Redirect from="*" to='/' />
         </Route>
       </Router>
     </Provider>
