@@ -1,13 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router'
-import styles from './navlink.scss'
-
 
 
 export const NavLink = props => {
+  console.log('rendering')
   return (
-    <Link { ...props } style={ { textDecoration: 'none' } } activeClassName={ styles.activeLink }>
-      { props.children }
-    </Link>
+    <Link { ...props } style={ { textDecoration: 'none' } } activeStyle={ { fontWeight: 'bolder' } } />
   )
 }

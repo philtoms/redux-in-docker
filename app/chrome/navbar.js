@@ -28,7 +28,11 @@ class Navbar extends Component {
       <div className={ styles.navbar }>
         <div className={ styles.navlinks }>
           <ul>
-            <li><NavLink to='/' onlyActiveOnIndex={ true }><ActionHome className={ styles.homeIcon } color='#455A64'></ActionHome></NavLink></li>
+            <li>
+              <NavLink to='/' onlyActiveOnIndex={ true }>
+                <ActionHome className={ styles.homeIcon } color='#455A64'></ActionHome>
+              </NavLink>
+            </li>
             <li><NavLink to='/example'>Component Example</NavLink></li>
             <li><NavLink to='/dummy-route-1'>Dummy Route 1</NavLink></li>
             <li><NavLink to='/dummy-route-2'>Dummy Route 2</NavLink></li>
@@ -53,8 +57,9 @@ class Navbar extends Component {
 }
 
 export const NavbarContainer = connect(
-  state => {
-    return { loggedInUser: state.auth.loggedInUser }
+  (state, ownProps) => {
+    // pass own props through, or else NavLinks will never re-render
+    return Object.assign({ loggedInUser: state.auth.loggedInUser }, ownProps)
   },
   dispatch => {
     return {
