@@ -50,7 +50,7 @@
     "react-router-redux": "^4.0.4",
     "react-tap-event-plugin": "^1.0.0",
     "redux": "^3.5.2",
-    "redux-actions": "github:yangmillstheory/redux-actions#64279898803c3a996a033d704df5eacd126fb9d2",
+    "redux-actions": "github:yangmillstheory/redux-actions#npm-git-install",
     "redux-thunk": "^2.1.0"
   }
 }
