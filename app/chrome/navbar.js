@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { logOut } from 'auth'
+import { logOutThunk } from 'auth'
 import IconMenu from 'material-ui/IconMenu'
 import MenuItem from 'material-ui/MenuItem'
 import ActionHome from 'material-ui/svg-icons/action/home'
@@ -57,14 +57,11 @@ class Navbar extends Component {
 }
 
 export const NavbarContainer = connect(
-  (state, ownProps) => {
-    // pass own props through, or else NavLinks will never re-render
-    return Object.assign({ loggedInUser: state.auth.loggedInUser }, ownProps)
-  },
+  (state, ownProps) => ownProps,
   dispatch => {
     return {
       onLogOutClick() {
-        return dispatch(logOut())
+        return dispatch(logOutThunk())
       },
     }
   },

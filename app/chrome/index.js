@@ -19,8 +19,8 @@ const Chrome = ({ loggedInUser, children }) => {
 }
 
 
-export const ChromeContainer = connect((state, ownProps) => {
-  return { loggedInUser: state.auth.loggedInUser, children: ownProps.children }
+export const ChromeContainer = connect(({ auth }, { children }) => {
+  return { loggedInUser: auth.loggedInUser, children }
 })(Chrome)
 
 

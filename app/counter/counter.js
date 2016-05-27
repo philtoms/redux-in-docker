@@ -7,6 +7,8 @@ import AddCircle from 'material-ui/svg-icons/content/add-circle'
 import RemoveCircle from 'material-ui/svg-icons/content/remove-circle'
 
 
+const STEP = 1
+
 const Counter = ({ count, onIncrement, onDecrement }) => {
   return (
     <div>
@@ -25,10 +27,10 @@ export const CounterContainer = connect(({ counter }) => {
 }, dispatch => {
   return {
     onIncrement() {
-      return dispatch(increment())
+      return dispatch(increment(STEP))
     },
     onDecrement() {
-      return dispatch(decrement())
+      return dispatch(decrement(STEP))
     },
   }
 })(Counter)

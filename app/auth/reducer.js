@@ -1,17 +1,20 @@
-import { LOGIN_FAILURE, LOGIN_SUCCESS, LOGOUT } from './actions'
+import { AUTH } from './actions'
+import { handleAction } from 'redux-actions'
 import { AuthService } from './service'
 
 
 
-export function authReducer(
-  state = { loggedInUser: AuthService.authenticated ? AuthService.profile : null },
-  action
-) {
-  const { type } = action
-  if (type === LOGOUT || type === LOGIN_FAILURE) {
-    return Object.assign({}, state, { loggedInUser: null })
-  } else if (type === LOGIN_SUCCESS) {
-    return Object.assign({}, state, { loggedInUser: action.loggedInUser })
-  }
-  return state
-}
+export const authReducer = handleAction(AUTH,
+  {
+    next(state, action) {
+      return { ...state, loggedInUser: action.payload }
+    },
+
+    throw() {
+      return { loggedInUser: null }
+    },
+  },
+  {
+    loggedInUser: AuthService.authenticated ? AuthService.profile : null,
+  },
+)

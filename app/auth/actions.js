@@ -1,47 +1,28 @@
 import { AuthService } from './service'
+import { createAction } from 'redux-actions'
 
 
-export const LOGOUT = 'LOGOUT'
-export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
-export const LOGIN_FAILURE = 'LOGIN_FAILURE'
+export const AUTH = 'AUTH'
+export const auth = createAction(AUTH)
 
-export const loggedOut = () => {
-  return {
-    type: LOGOUT,
-    loggedInUser: null,
-  }
-}
-
-const logInSuccess = profile => {
-  return {
-    type: LOGIN_SUCCESS,
-    loggedInUser: profile,
-  }
-}
-
-const logInFailure = error => {
-  return {
-    type: LOGIN_FAILURE,
-    loggedInUser: null,
-    error,
-  }
-}
-
-
-export function logIn() {
+export const logInThunk = () => {
   return dispatch => {
     return AuthService.logIn()
       .then(profile => {
-        return dispatch(logInSuccess(profile))
+        return dispatch(auth(profile))
       })
       .catch(error => {
-        return dispatch(logInFailure(error))
+        if (!(error instanceof Error)) {
+          error = new Error(error)
+        }
+        return dispatch(auth(error))
       })
   }
 }
 
-export function logOut() {
+
+export function logOutThunk() {
   return dispatch => {
-    return AuthService.logOut().then(() => dispatch(loggedOut()))
+    return AuthService.logOut().then(() => dispatch(auth(null)))
   }
 }
