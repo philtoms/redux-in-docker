@@ -8,9 +8,6 @@
     "node": true,
     "es6": true
   },
-  "globals": {
-    "Auth0Lock": true
-  },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "rules": {
     "react/jsx-curly-spacing": [2, "always"],
