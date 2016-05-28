@@ -6,7 +6,7 @@ export default {
   devtool: 'cheap-module-source-map',
 
   entry: [
-    'webpack-dev-server/client?http://0.0.0.0:8000',
+    'webpack-dev-server/client?http://0.0.0.0:8080',
     './app',
   ],
 
@@ -56,7 +56,7 @@ export default {
     progress: true,
     historyApiFallback: true,
     host: '0.0.0.0',
-    port: '8000',
+    port: '8080',
     watchOptions: process.env.DOCKER_MAC_BETA
       ? {}
       : { aggregateTimeout: 300, poll: 1000 }

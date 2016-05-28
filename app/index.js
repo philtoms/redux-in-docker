@@ -6,7 +6,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import { Provider } from 'react-redux'
 
-import { ChromeContainer } from './chrome'
+import { Chrome } from './chrome'
 import { Home } from 'home'
 import { CounterContainer } from 'counter'
 import { ExampleComponent } from 'util'
@@ -31,7 +31,7 @@ ReactDOM.render(
   <MuiThemeProvider muiTheme={ muiTheme }>
     <Provider store={ store }>
       <Router history={ syncHistoryWithStore(browserHistory, store) }>
-        <Route path='/' component={ ChromeContainer }>
+        <Route path='/' component={ Chrome }>
           <IndexRoute component={ Home } />
           <Route path='example' component={ CounterContainer }></Route>
           <Route path='dummy-route-1' component={ ExampleComponent } content='First Dummy Route'></Route>

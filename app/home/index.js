@@ -2,7 +2,6 @@ import React from 'react'
 import { BlankTargetLink } from 'util'
 
 
-
 export const Home = () => {
   return (
     <div>

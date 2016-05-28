@@ -1,27 +1,15 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import { NavbarContainer } from './navbar'
-import { Lock } from 'auth'
 import styles from './chrome.scss'
 
 
-
-const Chrome = ({ loggedInUser, children }) => {
-  let innerHtml = loggedInUser ? children : <Lock></Lock>
+export const Chrome = ({ children }) => {
   return (
     <div>
-      <NavbarContainer loggedInUser={ loggedInUser }></NavbarContainer>
+      <NavbarContainer />
       <div className={ styles.chrome }>
-        { innerHtml }
+        { children }
       </div>
     </div>
   )
 }
-
-
-export const ChromeContainer = connect(({ auth }, { children }) => {
-  return { loggedInUser: auth.loggedInUser, children }
-})(Chrome)
-
-
-
