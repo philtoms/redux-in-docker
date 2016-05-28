@@ -25,6 +25,7 @@ export const Home = () => {
       <ul>
         <li><BlankTargetLink to='https://www.youtube.com/watch?v=xsSnOQynTHs'>Hot Reloading With Time Travel</BlankTargetLink></li>
         <li><BlankTargetLink to='https://egghead.io/series/getting-started-with-redux'>Getting Started With Redux</BlankTargetLink></li>
+        <li><BlankTargetLink to='https://www.youtube.com/watch?v=VJ38wSFbM3A'>Read the Source - React Redux</BlankTargetLink></li>
       </ul>
     </div>
   )
