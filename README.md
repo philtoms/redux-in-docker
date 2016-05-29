@@ -15,13 +15,13 @@ $ docker-compose up -d
 $ docker-compose logs -f
 ```
 
-[Docker Mac](https://blog.docker.com/2016/03/docker-for-mac-windows-beta/) is supported. To activate it 
+[Docker Mac](https://blog.docker.com/2016/03/docker-for-mac-windows-beta/) is supported. To activate it
 
 ```
 $ echo "DOCKER_MAC_BETA=1" >> .env
 ```
 
-Visit `http://$(docker-machine ip):8080` to see your changes if you're not using Docker Mac, else visit `http://localhost:8080`. 
+Visit `http://$(docker-machine ip):8080` to see your changes if you're not using Docker Mac, else visit `http://localhost:8080`.
 
 #### Debugging
 
@@ -33,7 +33,7 @@ Development tooling includes
 
 ### Organization
 
-[By feature; with tests alongside source](http://marmelab.com/blog/2015/12/17/react-directory-structure.html) - though there aren't tests yet. 
+[By feature; with tests alongside source](http://marmelab.com/blog/2015/12/17/react-directory-structure.html) - though there aren't tests yet.
 
 #### ES6 and SASS modules
 

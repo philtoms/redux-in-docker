@@ -1,8 +1,9 @@
-import { INCREMENT, DECREMENT } from './actions'
+import { INCREMENT, DECREMENT, CHANGE_STEP } from './actions'
 import { handleActions } from 'redux-actions'
 
 
 export const counterReducer = handleActions({
-  [INCREMENT]: (state, action) => ({ count: state.count + action.payload }),
-  [DECREMENT]: (state, action) => ({ count: state.count - action.payload }),
-}, { count: 0 })
+  [INCREMENT]: ({ count, step }) => ({ count: count + step, step }),
+  [DECREMENT]: ({ count, step }) => ({ count: count - step, step }),
+  [CHANGE_STEP]: ({ count }, { payload }) => ({ count, step: payload }),
+}, { count: 0, step: 1 })
