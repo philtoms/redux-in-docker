@@ -11,6 +11,7 @@ export const Home = () => {
         <li><BlankTargetLink to='https://github.com/reactjs/react-router/'>React Router (Redux)</BlankTargetLink></li>
         <li><BlankTargetLink to='https://github.com/reactjs/redux/'>Redux</BlankTargetLink></li>
         <li><BlankTargetLink to='https://github.com/gaearon/redux-thunk'>Redux Thunk</BlankTargetLink></li>
+        <li><BlankTargetLink to='https://github.com/reactjs/reselect'>reselect</BlankTargetLink></li>
         <li><BlankTargetLink to='https://github.com/acdlite/redux-actions'>Redux Actions</BlankTargetLink></li>
         <li><BlankTargetLink to='http://www.material-ui.com/'>Material UI</BlankTargetLink></li>
       </ul>
