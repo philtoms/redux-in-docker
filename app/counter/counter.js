@@ -42,10 +42,8 @@ const mapStateToProps = createSelector(
   (count, step) => ({ count, step })
 )
 
-export const CounterContainer = connect(mapStateToProps, dispatch => {
-  return bindActionCreators({
-    // don't pass the event through
-    onIncrement() { return increment() },
-    onDecrement() { return decrement() },
-  }, dispatch)
+export const CounterContainer = connect(mapStateToProps, {
+  // don't pass the event through
+  onIncrement() { return increment() },
+  onDecrement() { return decrement() },
 })(Counter)
