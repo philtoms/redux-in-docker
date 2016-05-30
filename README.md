@@ -2,6 +2,8 @@
 
 Build a React.js app with a compile, bundle, and test pipeline already in place.
 
+![may-29-2016 23-46-05](https://cloud.githubusercontent.com/assets/2729079/15641741/9b8252a8-25f7-11e6-8e3e-b94760b2b528.gif)
+
 ### Development
 
 Get [Docker](https://docs.docker.com/linux/step_one/) (preferably [Docker Mac Beta](beta.docker.com) if you're on a Mac). Fork this repository.
