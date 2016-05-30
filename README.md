@@ -1,4 +1,4 @@
-## react-starter-app
+## react-docker-app
 
 Build a React.js app with a compile, bundle, and test pipeline already in place.
 
