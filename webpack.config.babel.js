@@ -4,7 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 
 export default {
-  devtool: 'source-map',
+  devtool: 'cheap-module-source-map',
 
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:8080',
