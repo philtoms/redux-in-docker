@@ -1,13 +1,12 @@
-import { join, resolve } from 'path'
+import { resolve } from 'path'
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import failPlugin from 'webpack-fail-plugin'
 
 
-
 export default {
-  devtool: 'cheap-module-source-map',
+  devtool: 'source-map',
 
   entry: [ './app' ],
 

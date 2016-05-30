@@ -1,10 +1,10 @@
-import {join, resolve} from 'path';
-import webpack from 'webpack';
+import { join, resolve } from 'path'
+import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 
 export default {
-  devtool: 'cheap-module-source-map',
+  devtool: 'source-map',
 
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:8080',
@@ -71,12 +71,12 @@ export default {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
-      }
-    })
+      },
+    }),
   ],
 
   eslint: {
     configFile: '.eslintrc',
     fix: true,
   },
-};
+}
