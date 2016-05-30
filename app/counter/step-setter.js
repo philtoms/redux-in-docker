@@ -9,26 +9,28 @@ const STEP_MIN = 1
 const STEP_MAX = 11
 
 class StepSetter extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.onChange = this::this.onChange
-    this.state = { errorText: null }
+    this.state = { errorText: null, step: this.props.initialStep }
   }
 
   onChange(event) {
     let step = toNumber(event.target.value)
+    let errorText
     if (inRange(step, STEP_MIN, STEP_MAX)) {
       this.props.dispatch(changeStep(step))
-      this.setState({ errorText: null })
+      errorText = null
     } else {
-      this.setState({ errorText: 'Type a number between 1 and 10' })
+      errorText = 'Type a number between 1 and 10'
     }
+    this.setState({ errorText, step })
   }
 
   render() {
     return (<TextField
       type='number' onChange={ this.onChange } floatingLabelText='Set increment/decrement step'
-      min={ STEP_MIN } max={ STEP_MAX } defaultValue={ this.props.defaultValue } errorText={ this.state.errorText } required='true' />)
+      min={ STEP_MIN } max={ STEP_MAX } value={ this.state.step } errorText={ this.state.errorText } required='true' />)
   }
 }
 

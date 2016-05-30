@@ -13,7 +13,7 @@ const Counter = ({ count, step, onIncrement, onDecrement }) => {
   return (
     <div>
       <p>
-        A container component connected to the Redux store with synchronous dispatches and memoized selectors.
+        A container componenfooasdst connected to the Redux store with synchronous dispatches and memoized selectors.
       </p>
       <p className={ styles.counterHeading }>
         Count: <strong>{ count }</strong>
