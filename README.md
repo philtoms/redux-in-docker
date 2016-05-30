@@ -35,6 +35,16 @@ Development tooling includes
 
 [By feature; with tests alongside source](http://marmelab.com/blog/2015/12/17/react-directory-structure.html) - though there aren't tests yet.
 
+### Production
+
+Set `NODE_ENV=production` in `.env`, then
+
+```
+$ docker-compose up -d
+```
+
+The build directory in the container is `/var/www/react-docker-app/dist`. These files are served by an [NGINX](https://www.nginx.com/) front-end. Logs are located in `/var/www/react-docker-app/logs`. 
+
 #### ES6 and SASS modules
 
 ES6 and SASS modules can be imported using relative file URLs or using Webpack's module resolution from the root `app/`

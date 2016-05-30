@@ -7,5 +7,5 @@ services:
     ports:
       - '8080:8080'
     volumes:
-      - .:/var/www/react-starter-app/src
-      - /var/www/react-starter-app/src/node_modules
+      - .:/var/www/react-docker-app/src
+      - /var/www/react-docker-app/src/node_modules

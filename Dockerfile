@@ -1,9 +1,10 @@
 FROM node:4.4.4
 
-RUN apt-get update
+RUN apt-get update && \
+    apt-get install -y nginx
 
 ENV TERM=xterm
-ENV ROOT /var/www/react-starter-app
+ENV ROOT /var/www/react-docker-app
 
 # make this cache-able
 RUN mkdir -p $ROOT/dist && \

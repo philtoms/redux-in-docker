@@ -1,5 +1,6 @@
 import {join, resolve} from 'path';
 import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 
 export default {
@@ -11,8 +12,9 @@ export default {
   ],
 
   output: {
-    path: join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: join(__dirname, 'dev-build'),
+    publicPath: '',
+    filename: 'dev-bundle.js',
   },
 
   module: {
@@ -32,7 +34,7 @@ export default {
       },
       {
         test: /\.scss$/,
-        loaders: ['style-loader', 'css?modules&camelCase&sourceMap!sass'],
+        loaders: ['style-loader', 'css?modules&camelCase&sourceMap&localIdentName=[name]_[local]!sass'],
       },
     ],
     preLoaders: [
@@ -55,6 +57,7 @@ export default {
     inline: true,
     progress: true,
     historyApiFallback: true,
+    contentBase: './dev-build',
     host: '0.0.0.0',
     port: '8080',
     watchOptions: process.env.DOCKER_MAC_BETA
@@ -64,7 +67,7 @@ export default {
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.optimize.DedupePlugin(),
+    new HtmlWebpackPlugin({ template: 'index.html' }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
