@@ -68,9 +68,10 @@ import { ... } from 'util' // maps to './util';
 - [x] ES6 everywhere
 - [x] JSX/SASS Hot Reloading
 - [x] [Material UI](https://github.com/callemall/material-ui)
+- [x] sourcemaps
 - [x] continuous bundling
 - [x] continuous linting
 - [ ] continuous testing
-- [ ] sourcemaps & minification when `NODE_ENV=production`
+- [ ] minification when `NODE_ENV=production`
 
 
