@@ -2,6 +2,7 @@ import { resolve } from 'path'
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
 import failPlugin from 'webpack-fail-plugin'
 
 
@@ -56,6 +57,13 @@ export default {
     new webpack.optimize.AggressiveMergingPlugin(),
     new HtmlWebpackPlugin({ template: 'index.html' }),
     new ExtractTextPlugin('style.[chunkhash].css', { allChunks: true }),
+    new CopyWebpackPlugin([
+      {
+        context: 'assets',
+        from: '**/*',
+        to: resolve(__dirname, '..', 'dist'),
+      },
+    ]),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
