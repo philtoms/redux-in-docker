@@ -12,7 +12,7 @@ export default {
   ],
 
   output: {
-    path: join(__dirname, 'dev-build'),
+    path: join(__dirname, 'assets'),
     publicPath: '',
     filename: 'dev-bundle.js',
   },
@@ -57,7 +57,7 @@ export default {
     inline: true,
     progress: true,
     historyApiFallback: true,
-    contentBase: './dev-build',
+    contentBase: './assets',
     host: '0.0.0.0',
     port: '8080',
     watchOptions: process.env.DOCKER_MAC_BETA
