@@ -50,9 +50,10 @@ Counter.propTypes = {
 
 export default connect(
   state => ({ count: getCount(state), step: getStep(state) }),
-(stateProps, dispatchProps, ownProps) => ({
+  dispatch => ({ dispatch }),
+  (stateProps, { dispatch }, ownProps) => ({
   ...stateProps,
   ...ownProps,
-  onIncrement: () => increment(stateProps.step),
-  onDecrement: () => decrement(stateProps.step),
+  onIncrement: () => dispatch(increment(stateProps.step)),
+  onDecrement: () => dispatch(decrement(stateProps.step)),
 }))(Counter)

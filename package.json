@@ -1,5 +1,5 @@
 {
-  "name": "react-docker-app",
+  "name": "redux-in-docker",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yangmillstheory/react-docker-app.git"
+    "url": "git+https://github.com/yangmillstheory/redux-in-docker.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yangmillstheory/react-docker-app/issues"
+    "url": "https://github.com/yangmillstheory/redux-in-docker/issues"
   },
-  "homepage": "https://github.com/yangmillstheory/react-docker-app#readme",
+  "homepage": "https://github.com/yangmillstheory/redux-in-docker#readme",
   "devDependencies": {
     "babel-core": "^6.9.0",
     "babel-eslint": "^6.0.4",

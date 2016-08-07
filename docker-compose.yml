@@ -7,5 +7,5 @@ services:
     ports:
       - '8000:8000'
     volumes:
-      - .:/var/www/react-docker-app/src
-      - /var/www/react-docker-app/src/node_modules
+      - .:/var/www/redux-in-docker/src
+      - /var/www/redux-in-docker/src/node_modules
