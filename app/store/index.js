@@ -5,13 +5,13 @@ import counter from 'counter'
 
 const devToolsExtension = window.devToolsExtension
 
-const store = createStore(
-  combineReducers({ counter }),
-  undefined,
-  compose(
-    applyMiddleware(thunkMiddleware),
-    devToolsExtension ? devToolsExtension() : identity
+export default function configureStore() {
+  return createStore(
+    combineReducers({ counter }),
+    undefined,
+    compose(
+      applyMiddleware(thunkMiddleware),
+      devToolsExtension ? devToolsExtension() : identity
+    )
   )
-)
-
-export default store
+}

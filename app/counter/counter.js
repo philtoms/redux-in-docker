@@ -2,9 +2,8 @@ import React, { PropTypes } from 'react'
 import styles from './counter.scss'
 import RaisedButton from 'material-ui/RaisedButton'
 import { connect } from 'react-redux'
-import { increment, decrement } from './actions'
+import { incrementThunk, decrementThunk } from './actions'
 import { getCount, getStep } from './reducers'
-import { createSelector } from 'reselect'
 import StepSetter from './step-setter'
 import AddCircle from 'material-ui/svg-icons/content/add-circle'
 import RemoveCircle from 'material-ui/svg-icons/content/remove-circle'
@@ -42,26 +41,16 @@ Counter.propTypes = {
   onDecrement: PropTypes.func.isRequired,
 }
 
-const mapStateToProps = createSelector(
-  [
-    state => getCount(state),
-    state => getStep(state),
-  ],
-  // this doesn't need to be memoized; we're just illustrating how reselect works.
-  // without this, navigating to and from this route will trigger this function
-  (count, step) => ({ count, step })
-)
-
 export default connect(
-  mapStateToProps,
+  state => ({ count: getCount(state), step: getStep(state) }),
   dispatch => ({
     onIncrement: event => {
       event.preventDefault()
-      dispatch(increment())
+      dispatch(incrementThunk())
     },
     onDecrement: event => {
       event.preventDefault()
-      dispatch(decrement())
+      dispatch(decrementThunk())
     },
   })
 )(Counter)

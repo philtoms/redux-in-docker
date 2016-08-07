@@ -10,7 +10,7 @@ import Chrome from './chrome'
 import Home from 'home'
 import { Counter } from 'counter'
 
-import store from './store'
+import configureStore from './store'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 
 injectTapEventPlugin()
@@ -24,7 +24,7 @@ const muiTheme = getMuiTheme({
 
 ReactDOM.render(
   <MuiThemeProvider muiTheme={ muiTheme }>
-    <Provider store={ store }>
+    <Provider store={ configureStore() }>
       <Router history={ browserHistory }>
         <Route path='/'
                component={ Chrome }>
