@@ -45,7 +45,7 @@ Counter.propTypes = {
 export default connect(
   state => ({
     count: selectors.getCount(state),
-    step: selectors.getStep(state)
+    step: selectors.getStep(state),
   }),
   dispatch => ({ dispatch }),
   (stateProps, { dispatch }, ownProps) => ({

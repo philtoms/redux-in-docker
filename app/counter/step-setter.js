@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { toNumber, inRange } from 'lodash'
 
 const STEP_MIN = 1
-const STEP_MAX = 11
+const STEP_MAX = 100
 
 @connect(
   state => ({ step: selectors.getStep(state) }),
