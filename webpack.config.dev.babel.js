@@ -76,7 +76,7 @@ export default {
   ],
 
   eslint: {
-    configFile: '.eslintrc.yml',
+    configFile: '.eslintrc',
     fix: true,
   },
 }

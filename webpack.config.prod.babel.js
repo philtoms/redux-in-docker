@@ -74,7 +74,7 @@ export default {
   eslint: {
     emitError: true,
     failOnError: true,
-    configFile: '.eslintrc.yml',
+    configFile: '.eslintrc',
     fix: false,
   },
 }
