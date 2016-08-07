@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --progress --colors",
+    "dev": "webpack-dev-server --config webpack.config.dev.babel.js --progress --colors",
     "build": "webpack -p --config webpack.config.prod.babel.js --progress --colors",
     "test": "echo 'Write some tests!'"
   },

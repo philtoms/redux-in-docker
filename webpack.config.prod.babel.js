@@ -2,8 +2,8 @@ import { resolve } from 'path'
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import CopyWebpackPlugin from 'copy-webpack-plugin'
 import failPlugin from 'webpack-fail-plugin'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
 
 
 export default {
@@ -74,7 +74,7 @@ export default {
   eslint: {
     emitError: true,
     failOnError: true,
-    configFile: '.eslintrc',
+    configFile: '.eslintrc.yml',
     fix: false,
   },
 }

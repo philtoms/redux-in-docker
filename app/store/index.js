@@ -1,16 +1,16 @@
 import { identity } from 'lodash'
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import thunkMiddleware from 'redux-thunk'
-import { counterReducer } from 'counter'
-import { routerReducer } from 'react-router-redux'
+import counter from 'counter'
 
+const devToolsExtension = windows.devToolsExtension
 
 const store = createStore(
-  combineReducers({ counter: counterReducer, routing: routerReducer }),
+  combineReducers({ counter }),
   undefined,
   compose(
     applyMiddleware(thunkMiddleware),
-    window.devToolsExtension ? window.devToolsExtension() : identity
+    devToolsExtension ? devToolsExtension() : identity
   )
 )
 
