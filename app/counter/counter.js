@@ -31,17 +31,19 @@ const Counter = ({ count, step, onIncrement, onDecrement }) => {
 }
 
 
-const mapStateToProps = createSelector(
-  [
-    state => state.counter.count,
-    state => state.counter.step,
-  ],
-  // this doesn't need to be memoized; we're just illustrating how reselect works.
-  // without this, navigating to and from this route will trigger this function
-  (count, step) => ({ count, step })
-)
+// const mapStateToProps = createSelector(
+//   [
+//     state => state.counter.count,
+//     state => state.counter.step,
+//   ],
+//   // this doesn't need to be memoized; we're just illustrating how reselect works.
+//   // without this, navigating to and from this route will trigger this function
+//   (count, step) => ({ count, step })
+// )
 
-export const CounterContainer = connect(mapStateToProps, {
+export const CounterContainer = connect(function(state) {
+    return { count: state.counter.count, step: state.counter.step }
+  }, {
   // don't pass the event through
   onIncrement() { return increment() },
   onDecrement() { return decrement() },
