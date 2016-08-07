@@ -1,5 +1,5 @@
 {
-  "name": "react-starter-app",
+  "name": "react-docker-app",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trueprint/react-starter-app.git"
+    "url": "git+https://github.com/yangmillstheory/react-docker-app.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trueprint/react-starter-app/issues"
+    "url": "https://github.com/yangmillstheory/react-docker-app/issues"
   },
-  "homepage": "https://github.com/trueprint/react-starter-app#readme",
+  "homepage": "https://github.com/yangmillstheory/react-docker-app#readme",
   "devDependencies": {
     "babel-core": "^6.9.0",
     "babel-eslint": "^6.0.4",

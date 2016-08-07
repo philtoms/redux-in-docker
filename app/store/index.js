@@ -3,7 +3,7 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import counter from 'counter'
 
-const devToolsExtension = windows.devToolsExtension
+const devToolsExtension = window.devToolsExtension
 
 const store = createStore(
   combineReducers({ counter }),

@@ -52,7 +52,16 @@ const mapStateToProps = createSelector(
   (count, step) => ({ count, step })
 )
 
-export default connect(mapStateToProps, {
-  onIncrement: increment,
-  onDecrement: decrement,
-})(Counter)
+export default connect(
+  mapStateToProps,
+  dispatch => ({
+    onIncrement: event => {
+      event.preventDefault()
+      dispatch(increment())
+    },
+    onDecrement: event => {
+      event.preventDefault()
+      dispatch(decrement())
+    },
+  })
+)(Counter)

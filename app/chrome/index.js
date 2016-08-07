@@ -1,23 +1,16 @@
 import React, { PropTypes } from 'react'
-import { connect } from 'react-redux'
 import Navbar from './navbar'
-import { Lock, getLoggedInUser } from 'auth'
 import styles from './chrome.scss'
 
-function Chrome({ loggedInUser, children }) {
+export default function Chrome({ children }) {
   return <div>
-    <Navbar loggedInUser={ loggedInUser } />
+    <Navbar />
     <div className={ styles.chrome }>
-      { loggedInUser ? children : <Lock /> }
+      { children }
     </div>
   </div>
 }
 
 Chrome.propTypes = {
-  loggedInUser: PropTypes.object,
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 }
-
-export default connect(
-  (state, { children }) => ({ loggedInUser: getLoggedInUser(state), children }),
-)(Chrome)
