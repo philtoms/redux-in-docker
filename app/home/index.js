@@ -4,7 +4,7 @@ import { BlankTargetLink } from 'common'
 export default function Home() {
   return (
     <div>
-      <h2>Welcome to the React.js Starter App</h2>
+      <h2>Welcome to the React Docker App</h2>
       <p>Libraries used:</p>
       <ul>
         <li><BlankTargetLink to='https://github.com/reactjs/react-router/'>React Router (Redux)</BlankTargetLink></li>
