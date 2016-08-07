@@ -9,12 +9,6 @@ import AddCircle from 'material-ui/svg-icons/content/add-circle'
 import RemoveCircle from 'material-ui/svg-icons/content/remove-circle'
 
 const Counter = ({ count, step, onIncrement, onDecrement }) => {
-  function decrementWithStep() {
-    onDecrement(step)
-  }
-  function incrementWithStep() {
-    onIncrement(step)
-  }
   return <div>
     <p>
       A container component connected to the Redux store with synchronous dispatches.
@@ -27,13 +21,13 @@ const Counter = ({ count, step, onIncrement, onDecrement }) => {
     <RaisedButton
       className={ styles.counterButton }
       primary
-      onClick={ incrementWithStep }
+      onClick={ onIncrement }
       icon={ <AddCircle /> } />
     { ' ' }
     <RaisedButton
       className={ styles.counterButton }
       primary
-      onClick={ decrementWithStep }
+      onClick={ onDecrement }
       icon={ <RemoveCircle /> } />
     <div className={ styles.stepInput }>
       <StepSetter />
