@@ -1,15 +1,16 @@
-import React from 'react'
-import { NavbarContainer } from './navbar'
+import React, { PropTypes } from 'react'
+import Navbar from './navbar'
 import styles from './chrome.scss'
 
-
-export const Chrome = ({ children }) => {
-  return (
-    <div>
-      <NavbarContainer />
-      <div className={ styles.chrome }>
-        { children }
-      </div>
+export default function Chrome({ children }) {
+  return <div>
+    <Navbar />
+    <div className={ styles.chrome }>
+      { children }
     </div>
-  )
+  </div>
+}
+
+Chrome.propTypes = {
+  children: PropTypes.node.isRequired,
 }

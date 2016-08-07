@@ -4,7 +4,7 @@ RUN apt-get update && \
     apt-get install -y nginx
 
 ENV TERM=xterm
-ENV ROOT /var/www/react-docker-app
+ENV ROOT /var/www/react-starter-app
 
 # make this cache-able
 RUN mkdir -p $ROOT/dist && \

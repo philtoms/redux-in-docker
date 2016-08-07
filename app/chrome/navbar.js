@@ -1,27 +1,36 @@
 import React from 'react'
+import IconMenu from 'material-ui/IconMenu'
 import ActionHome from 'material-ui/svg-icons/action/home'
-import { connect } from 'react-redux'
-import { NavLink } from 'util'
+import IconButton from 'material-ui/IconButton/IconButton'
+import Avatar from 'material-ui/Avatar'
+import { NavLink } from 'common'
 import styles from './navbar.scss'
 
-
-const Navbar = () => {
+export default function Navbar() {
   return (
     <div className={ styles.navbar }>
       <div className={ styles.navlinks }>
         <ul>
           <li>
-            <NavLink to='/' onlyActiveOnIndex={ true }>
-              <ActionHome className={ styles.homeIcon } color='#455A64'></ActionHome>
+            <NavLink
+              to='/'
+              onlyActiveOnIndex>
+              <ActionHome
+                className={ styles.homeIcon }
+                color='#455A64' />
             </NavLink>
           </li>
-          <li><NavLink to='/example'>Component Example</NavLink></li>
-          <li><NavLink to='/dummy-route-1'>Dummy Route 1</NavLink></li>
-          <li><NavLink to='/dummy-route-2'>Dummy Route 2</NavLink></li>
+          <li><NavLink to='/counter'>Counter</NavLink></li>
         </ul>
+      </div>
+      <div className={ styles.navmenu }>
+        <span>Hi!</span>
+        <IconMenu
+          iconButtonElement={ <IconButton><Avatar src='' className={ styles.navmenuAvatar } /></IconButton> }
+          targetOrigin={ { horizontal: 'right', vertical: 'bottom' } }
+          anchorOrigin={ { horizontal: 'right', vertical: 'top' } }>
+        </IconMenu>
       </div>
     </div>
   )
 }
-
-export const NavbarContainer = connect((state, ownProps) => ownProps)(Navbar)

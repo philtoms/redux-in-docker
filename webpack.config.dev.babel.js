@@ -7,7 +7,7 @@ export default {
   devtool: 'cheap-module-source-map',
 
   entry: [
-    'webpack-dev-server/client?http://0.0.0.0:8080',
+    'webpack-dev-server/client?http://0.0.0.0:8000',
     './app',
   ],
 
@@ -29,12 +29,12 @@ export default {
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          cacheDirectory: '/tmp'
+          cacheDirectory: '/tmp',
         },
       },
       {
         test: /\.scss$/,
-        loaders: ['style-loader', 'css?modules&camelCase&sourceMap&localIdentName=[name]_[local]!sass'],
+        loaders: [ 'style-loader', 'css?modules&camelCase&sourceMap&localIdentName=[name]_[local]!sass' ],
       },
     ],
     preLoaders: [
@@ -48,7 +48,7 @@ export default {
 
   resolve: {
     root: [
-      resolve('./app'),
+      resolve(__dirname, './app'),
     ],
   },
 
@@ -59,10 +59,10 @@ export default {
     historyApiFallback: true,
     contentBase: './assets',
     host: '0.0.0.0',
-    port: '8080',
+    port: '8000',
     watchOptions: process.env.DOCKER_MAC_BETA
       ? {}
-      : { aggregateTimeout: 300, poll: 1000 }
+      : { aggregateTimeout: 300, poll: 1000 },
   },
 
   plugins: [
