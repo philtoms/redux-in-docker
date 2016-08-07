@@ -13,10 +13,12 @@ const step = makeActionReducers({
 
 export default combineReducers({ count, step })
 
-export function getStep(state) {
+function getStep(state) {
   return state.counter.step
 }
 
-export function getCount(state) {
+function getCount(state) {
   return state.counter.count
 }
+
+export const selectors = { getStep, getCount }

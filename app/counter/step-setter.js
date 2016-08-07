@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import TextField from 'material-ui/TextField'
 import { changeStep } from './actions'
-import { getStep } from './reducers'
+import { selectors } from './reducers'
 import { connect } from 'react-redux'
 import { toNumber, inRange } from 'lodash'
 
@@ -9,7 +9,7 @@ const STEP_MIN = 1
 const STEP_MAX = 11
 
 @connect(
-  state => ({ step: getStep(state) }),
+  state => ({ step: selectors.getStep(state) }),
   { changeStep },
 )
 export default class StepSetter extends Component {
