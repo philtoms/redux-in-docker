@@ -1,10 +1,10 @@
-FROM node:4.4.4
+FROM node:7.3
 
 RUN apt-get update && \
     apt-get install -y nginx
 
 ENV TERM=xterm
-ENV ROOT /var/www/react-starter-app
+ENV ROOT /var/www/redux-in-docker
 
 # make this cache-able
 RUN mkdir -p $ROOT/dist && \

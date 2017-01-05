@@ -11,7 +11,7 @@ import RemoveCircle from 'material-ui/svg-icons/content/remove-circle'
 const Counter = ({ count, step, onIncrement, onDecrement }) => {
   return <div>
     <p>
-      A container component connected to the Redux store with synchronous dispatches.
+      A very very nice container component connected to the Redux store with synchronous dispatches.
     </p>
     <p className={ styles.counterHeading }>
       Count: <strong>{ count }</strong>
